@@ -14,18 +14,47 @@
     <li>🛍️Tiendas exclusivas donde podés conseguir merchandising oficial.</li>
   </ul>
   <h2>Las 5 áreas temáticas:</h2>
-  <ul>
-    <li>The Wizarding World of Harry Potter – Ministry of Magic – Reviví el ministerio de magia.</li>
-    <img src="img/harry_potter.jpeg" alt="ministerio de magia">
-    <li>Celestial Park – El corazón del parque, con jardines brillantes, fuentes interactivas y juegos familiares.</li>
-    <img src="img/celestial_park.avif" alt="celestial park">
-    <li>Super Nintendo World – Saltá con Mario, luchá con Bowser y recorré mundos pixelados.</li>
-    <img src="img/nintendo_world.avif" alt="nintendo">
-    <li>How to Train Your Dragon – Isle of Berk – Volá junto a dragones y explorá la aldea vikinga.</li>
-    <img src="img/train_your_dragon.jpg" alt="entrenando a tu dragon">
-    <li>Dark Universe – Inspirado en los monstruos clásicos de Universal como Frankenstein y el Hombre Lobo..</li>
-    <img src="img/dark_universe.jpeg" alt="dark universe">
-  </ul>
+     <div class="grid">
+    <div class="card">
+      <img src="img/harry_potter.jpeg" alt="ministerio de magia">
+      <div class="card-content">
+        <strong>The Wizarding World of Harry Potter</strong>
+        <p>Reviví el Ministerio de Magia.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/celestial_park.avif" alt="celestial park">
+      <div class="card-content">
+        <strong>Celestial Park</strong>
+        <p>El corazón del parque, con jardines brillantes y fuentes interactivas.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/nintendo_world.avif" alt="nintendo">
+      <div class="card-content">
+        <strong>Super Nintendo World</strong>
+        <p>Saltá con Mario, luchá con Bowser y recorré mundos pixelados.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/train_your_dragon.jpg" alt="entrenando a tu dragon">
+      <div class="card-content">
+        <strong>Isle of Berk</strong>
+        <p>Volá junto a dragones y explorá la aldea vikinga.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="img/dark_universe.jpeg" alt="dark universe">
+      <div class="card-content">
+        <strong>Dark Universe</strong>
+        <p>Inspirado en los monstruos clásicos de Universal.</p>
+      </div>
+    </div>
+  </div>
 </body>
 <style>
     body {
@@ -86,6 +115,44 @@
       object-fit: cover;
       border-radius: 10px;
       margin-top: 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card-content strong {
+      color: #004080;
+      font-size: 18px;
+    }
+
+    .card-content p {
+      margin-top: 8px;
+      font-size: 15px;
     }
   </style>
 </html>
